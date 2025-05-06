@@ -147,7 +147,6 @@ def competicao(): # exercicio 8
         print(f'Atleta: {n[maior * 6]}')
     print(f'Saltos: {n[1 + maior * 6]} - {n[2 + maior * 6]} - {n[3 + maior * 6]} - {n[4 + maior * 6]} - {n[5 + maior * 6]}')
     print(f'Média dos saltos: {maiorMedia} m')
-    print(n)
         
 def main():
     funcoes = {
