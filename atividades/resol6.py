@@ -118,7 +118,7 @@ def competicao(): # exercicio 8
     n.append(atleta)
     maior = 0
     maiorMedia = 0
-    cnt = 0
+    cnt = 0 # cnt eh a contagem de atletas. cnt == 0, atleta 0.
     while atleta != '':
         n.append(float(input(f'Diga a altura do primeiro salto do atleta {atleta}: ')))
         n.append(float(input(f'Diga a altura do segundo salto do atleta {atleta}: ')))
@@ -126,6 +126,9 @@ def competicao(): # exercicio 8
         n.append(float(input(f'Diga a altura do quarto salto do atleta {atleta}: ')))
         n.append(float(input(f'Diga a altura do quinto salto do atleta {atleta}: ')))
         media = (n[1 + cnt*6] + n[2 + cnt*6] + n[3 + cnt*6] + n[4 + cnt*6] + n[5 + cnt*6])/5
+        # acima, veja que "cnt*6" eh para acessar o salto em cada atleta. '6' eh a quantidade
+        # de dados por atleta. Assim, 'cnt*6' eh o nome do atleta cnt, '1 + cnt*6'eh o primeiro salto... 
+        # alternativamente, poderiam ser criadas listas dentro da lista 'n' para cada atleta.
         print(f'Atleta: {atleta}\nPrimeiro Salto: {n[1 + cnt*6]} m\nSegundo Salto: {n[2 + cnt*6]} m\nTerceiro Salto: {n[3 + cnt*6]} m\nQuarto Salto: {n[4 + cnt*6]} m\n Quinto Salto: {n[5 + cnt*6]} m')
         if media > maiorMedia:
             maiorMedia = media
@@ -134,6 +137,8 @@ def competicao(): # exercicio 8
         atleta = input('Diga o nome do atleta: ')
         n.append(atleta)
     print('Resultado final: ')
+
+    # verificando a media do atleta 0, pois ainda nao foi verificado
     media1 = (n[1] + n[2] + n[3] + n[4] + n[5])/5
     if maiorMedia == media1:
         print(f'Atleta: {n[0]}')
@@ -142,6 +147,7 @@ def competicao(): # exercicio 8
         print(f'Atleta: {n[maior * 6]}')
     print(f'Saltos: {n[1 + maior * 6]} - {n[2 + maior * 6]} - {n[3 + maior * 6]} - {n[4 + maior * 6]} - {n[5 + maior * 6]}')
     print(f'Média dos saltos: {maiorMedia} m')
+    print(n)
         
 def main():
     funcoes = {
