@@ -1,4 +1,4 @@
-# Algoritmos e Programação - Lista de exercícios 6
+# Algoritmos e Programação - Lista de exercícios 7
 # Aluno: Henrique Catani
 # Exercício 1
 
@@ -6,7 +6,7 @@ from time import sleep
 print(f"Atividades de Algoritmos e Programação 7, Exercício 1.\n Aluno: Henrique Catani") 
 def abreArquivo():
     listaCompras = set()
-    listaLocal = False # verificação se o arquivo foi criado por este programa
+    listaLocal = True # verificação se o arquivo foi criado por este programa
     aberto = input('Diga o nome do arquivo a ser aberto (padrão: lista.txt). Se o arquivo não existe, será criado.\n> ')
     if aberto == '':
         aberto = "lista.txt"
@@ -17,7 +17,7 @@ def abreArquivo():
         f.close()
     except FileExistsError: # se o arquivo existir, lê ele para a lista
         print(f'{aberto} encontrado no diretório! Lendo arquivo...')
-        listaLocal = True
+        listaLocal = False
         with open(aberto, "r") as f:
             linha1 = True
             for linha in f:
@@ -54,7 +54,7 @@ opcoes = {
 
 sleep(1)
 n = 0
-while n != 9:
+while True:
     
     if n != 0:
         sleep(1)
