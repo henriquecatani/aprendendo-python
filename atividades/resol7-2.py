@@ -15,6 +15,7 @@ def criaConjuntos():
     return set1,set2
 n = 0
 run1 = True
+set1, set2 = set(), set()
 while n != 6:
     if n != 0:
         print('Digite 0 para exibir as opções')
