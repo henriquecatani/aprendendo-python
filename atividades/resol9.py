@@ -10,12 +10,12 @@ def cntLetras(frase):
                 cnt[letra] += 1
             else :
                 cnt[letra] = 1
+    yield "Contagem de letras:"
     for j,k in cnt.items():
         yield '{}: {}'.format(j, k)
 
 frase = input("Digite uma frase para contar as letras: ")
 resultado_contagem = cntLetras(frase)
-print("Contagem de letras:")
 for l in resultado_contagem:
     print(l)
 # for letra, quantidade in resultado_contagem.items():
