@@ -24,7 +24,7 @@ def cntPalavras(arquivo): # questao 2
                 for palavra in palavras:
                     palavra = palavra.strip('\n').lower()
                     cnt[palavra] = cnt.get(palavra,0) +1
-                return cnt, v
+        return cnt, v
     except FileNotFoundError:
         v = False
         return "Arquivo não encontrado!", v
@@ -60,7 +60,7 @@ def main():
             
             if valido:
                 print('Palavras | Quantidade')
-                for a,b in plvs.items():
+                for a,b in plvs.items(): # type: ignore
                     print(f'{a}: {b}')
             else:
                 print(plvs)
