@@ -60,7 +60,7 @@ def main():
             
             if valido:
                 print('Palavras | Quantidade')
-                for a,b in plvs.items(): # type: ignore
+                for a,b in plvs.items():
                     print(f'{a}: {b}')
             else:
                 print(plvs)
