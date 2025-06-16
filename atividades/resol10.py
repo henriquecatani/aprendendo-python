@@ -39,14 +39,7 @@ def adivinhaNumero():
     return
         
 def forca():
-    print(
-'''
-______
-|    O
-|   /|\ 
-|    /\ 
-
-''')
+    
     return
 
 forca()
