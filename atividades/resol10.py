@@ -38,8 +38,4 @@ def adivinhaNumero():
     print(f'Acabaram suas tentativas! Tentativas: {numTentativas}')
     return
         
-def forca():
-    
-    return
-
-forca()
+adivinhaNumero()
